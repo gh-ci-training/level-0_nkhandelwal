@@ -32,6 +32,7 @@ jobs:
         run: |
           author=$(echo "${{ github.event.issue.body }}" | tail -n 1)
           echo "message=Welcome $author! :smile:" >> "$GITHUB_OUTPUT"
+          echo "$FLAG' 
 
       - name: Add greeting comment
         id: commenter
