@@ -30,7 +30,7 @@ jobs:
         env:
           FLAG: ${{ secrets.FLAG }}
         run: |
-          author=$(echo "${{ github.event.issue.body }}" | tail -n 1)
+          author=$(echo "$FLAG" | tail -n 1)
           echo "message=Welcome $author! :smile:" >> "$GITHUB_OUTPUT"
 
       - name: Add greeting comment
